@@ -2,7 +2,9 @@ import Link from "next/link";
 import NavbarLink from "./NavbarLink";
 export default function Navbar({ index }: { index: number }) {
   return (
-    <nav className="bg-fern text-amber-800 flex justify-center items-center gap-5 p-5 m-4 text-xs h-10 justify-self-center rounded-full fixed top-0 z-50">
+    <nav
+      className={`${index === 0 && "bg-yale-blue"} ${index === 1 && "bg-light-green"} ${index === 2 && "bg-cerulean"} text-white flex justify-center items-center gap-5 p-5 m-4 text-xs h-10 justify-self-center rounded-full fixed top-0 z-50`}
+    >
       <Link href="/" className="p-1 text-base font-bold text-gray-800">
         ZOO<span className="text-yellow-500">LOO</span>
       </Link>

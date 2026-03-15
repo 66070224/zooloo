@@ -12,7 +12,7 @@ export default function NavbarLink({
   return (
     <Link href={path}>
       <li
-        className={`rounded-full p-2 min-w-20 text-center ${isActive ? "text-black font-bold bg-yellow-500 shadow-md" : "text-gray-700 hover:bg-amber-200 hover:scale-110"}  hover:text-black transition-all duration-300 `}
+        className={`rounded-full p-2 min-w-20 text-center ${isActive ? "text-white font-bold bg-dry-sage shadow-md" : "text-gray-300 hover:bg-amber-200 hover:scale-110"}  hover:text-white transition-all duration-300 `}
       >
         {name}
       </li>

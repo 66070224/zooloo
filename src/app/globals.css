@@ -4,11 +4,16 @@
   --background: #ffffff;
   --foreground: #171717;
 
-  --dust-grey: #dad7cd;
-  --dry-sage: #a3b18a;
-  --fern: #588157;
-  --hunter-green: #588157;
-  --pine-teal: #588157;
+  --lime-cream: #d9ed92;
+  --light-green: #b5e48c;
+  --willow-green: #99d98c;
+  --emerald: #76c893;
+  --ocean-mist: #52b69a;
+  --tropical-teal: #34a0a4;
+  --bondi-blue: #34a0a4;
+  --cerulean: #1a759f;
+  --baltic-blue: #1e6091;
+  --yale-blue: #184e77;
 }
 
 @theme inline {
@@ -18,11 +23,16 @@
   --font-mono: var(--font-geist-mono);
   --font-sans: var(--font-syne);
 
-  --color-dust-grey: var(--dust-grey);
-  --color-dry-sage: var(--dry-sage);
-  --color-fern: var(--fern);
-  --color-hunter-green: var(--hunter-green);
-  --color-pine-teal: var(--pine-teal);
+  --color-lime-cream: var(--lime-cream);
+  --color-light-green: var(--light-green);
+  --color-willow-green: var(--willow-green);
+  --color-emerald: var(--emerald);
+  --color-ocean-mist: var(--ocean-mist);
+  --color-tropical-teal: var(--tropical-teal);
+  --color-bondi-blue: var(--bondi-blue);
+  --color-cerulean: var(--cerulean);
+  --color-baltic-blue: var(--baltic-blue);
+  --color-yale-blue: var(--yale-blue);
 }
 
 @media (prefers-color-scheme: dark) {
