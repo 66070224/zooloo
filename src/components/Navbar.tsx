@@ -6,7 +6,7 @@ export default function Navbar() {
     const navitem_background = "text-black bg-yellow-500 shadow-md"
     return (
         <>
-            <div className="bg-amber-100 text-amber-800 flex justify-center m-4 text-xs w-100 h-10 justify-self-center rounded-full fixed top-0">
+            <div className="bg-amber-100 text-amber-800 flex justify-center m-4 text-xs w-100 h-10 justify-self-center rounded-full fixed top-0 z-999">
 
                 <ul className="flex flex-row gap-4 py-1.5">
                     <Link href="/" onNavigate={()=>setButtonSelected("")}><li className='rounded-full p-1 mr-8 text-base font-bold text-gray-800'>ZOO<span className='text-yellow-500'>ROO</span></li></Link>
@@ -18,4 +18,4 @@ export default function Navbar() {
             </div>
         </>
     )
-}
+}3
