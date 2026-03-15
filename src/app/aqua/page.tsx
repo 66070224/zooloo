@@ -1,6 +1,9 @@
+import Navbar from "@/components/navbar/Navbar";
+
 export default function AquaPage() {
   return (
     <>
+      <Navbar index={2} />
       <div>
         <h1>Aqua Pages</h1>
         <img
