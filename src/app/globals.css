@@ -3,6 +3,12 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --dust-grey: #dad7cd;
+  --dry-sage: #a3b18a;
+  --fern: #588157;
+  --hunter-green: #588157;
+  --pine-teal: #588157;
 }
 
 @theme inline {
@@ -10,7 +16,13 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-sans: var(--font-syne); 
+  --font-sans: var(--font-syne);
+
+  --color-dust-grey: var(--dust-grey);
+  --color-dry-sage: var(--dry-sage);
+  --color-fern: var(--fern);
+  --color-hunter-green: var(--hunter-green);
+  --color-pine-teal: var(--pine-teal);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,5 +35,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans)
+  font-family: var(--font-sans);
 }
