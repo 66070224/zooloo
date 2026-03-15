@@ -1,9 +1,30 @@
-export default function Ground() {
-    return (<>
-        <div>
-            <h1>Ground Pages</h1>
-            <img src={'https://images2.minutemediacdn.com/image/upload/c_fill,w_1200,ar_1:1,f_auto,q_auto,g_auto/shape/cover/sport/57386-disney1-b923760c6953c1a32e86c343c606a3ff.jpg'} alt="" />
+import Link from 'next/link';
+import { groundAnimals } from '@/data/animals';
+import AnimalCard from '@/components/animalcard'
 
-        </div>
-    </>)
+export default function GroundPage() {
+  return (
+    <div className="min-h-screen p-8 bg-gray-50">
+      <Link 
+        href="/" 
+        className="inline-flex items-center mb-6 px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors font-medium"
+      >
+        &larr; กลับหน้าหลัก (Home)
+      </Link>
+
+      <h1 className="text-4xl font-bold text-center mb-10 text-gray-800">สัตว์บก (Ground Animals)</h1>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        {groundAnimals.map((animal) => (
+          <AnimalCard 
+            key={animal.id}
+            id={animal.id}
+            name={animal.name}
+            image={animal.image}
+            categoryPath="ground" 
+          />
+        ))}
+      </div>
+    </div>
+  );
 }
