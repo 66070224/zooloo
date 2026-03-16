@@ -38,7 +38,7 @@ export default function Home() {
           alt=""
         />
         <h1 className="fixed text-4xl bottom-30">
-          Explorer{" "}
+          Explore{" "}
           <span
             className={`${onHover == "aqua" ? "text-6xl" : ""} transition-all duration-500 font-bold text-blue-600`}
           >
@@ -58,7 +58,7 @@ export default function Home() {
           alt=""
         />
         <h1 className="fixed text-4xl bottom-30">
-          Explorer{" "}
+          Explore{" "}
           <span
             className={`${onHover == "ground" ? "text-6xl" : ""} transition-all duration-500 font-bold text-amber-600`}
           >
@@ -78,7 +78,7 @@ export default function Home() {
           alt=""
         />
         <h1 className="fixed text-4xl bottom-30">
-          Explorer{" "}
+          Explore{" "}
           <span
             className={`${onHover == "air" ? "text-6xl" : ""} transition-all duration-500 font-bold text-sky-400`}
           >
