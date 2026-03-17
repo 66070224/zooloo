@@ -15,7 +15,10 @@
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "tailwindcss-motion": "^1.1.1",
-    "tsparticles": "^3.9.1"
+    "tsparticles": "^3.9.1",
+    "mongodb": "^7.1.0",
+    "mongoose": "^9.3.0",
+    "server-only": "^0.0.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
