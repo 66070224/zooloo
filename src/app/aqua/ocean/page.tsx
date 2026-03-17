@@ -1,3 +1,4 @@
+import AquaAnimalCard from "@/components/animal/Aquaanimalcard"
 import Navbar from "@/components/navbar/Navbar"
 
 export default function Ocean() {
@@ -62,16 +63,16 @@ export default function Ocean() {
             detail: "Small reef fish (Amphiprioninae) that live among sea anemone tentacles in a mutualistic relationship.",
             imageUrl: "https://static.vecteezy.com/system/resources/previews/058/065/023/non_2x/stunning-closeup-of-an-ocellaris-clownfish-nemo-fish-in-vibrant-orange-and-white-stripes-free-png.png"
         },
-        { 
-            id: 13, 
-            name: "shark", 
-            detail: "cartilaginous fish, part of the class Chondrichthyes, that have existed for over 420 million years", 
-            imageUrl: "https://static.vecteezy.com/system/resources/thumbnails/052/511/193/small/great-white-shark-png.png" 
-        }, { 
-            id: 14, 
-            name: "Whale", 
-            detail: "Whales are a widely distributed and diverse group of fully aquatic placental marine mammals. As an informal and colloquial grouping", 
-            imageUrl: "https://www.pngall.com/wp-content/uploads/7/Whale-PNG-Picture.png" 
+        {
+            id: 13,
+            name: "shark",
+            detail: "cartilaginous fish, part of the class Chondrichthyes, that have existed for over 420 million years",
+            imageUrl: "https://static.vecteezy.com/system/resources/thumbnails/052/511/193/small/great-white-shark-png.png"
+        }, {
+            id: 14,
+            name: "Whale",
+            detail: "Whales are a widely distributed and diverse group of fully aquatic placental marine mammals. As an informal and colloquial grouping",
+            imageUrl: "https://www.pngall.com/wp-content/uploads/7/Whale-PNG-Picture.png"
         }
     ];
     return (
@@ -81,35 +82,8 @@ export default function Ocean() {
                 <div className="max-w-6xl mx-auto flex flex-col gap-24 px-6 py-10">
                     {
                         oceanData.map((i) => (
-                            i.id % 2 == 0 ? <div className="min-h-70 mt-6 py-4 flex flex-row-reverse gap-10" key={i.id}>
-                                <div className="flex justify-center flex-1">
-                                    <img src={i.imageUrl} className="max-w-[500px] hover:scale-110 transition-all duration-500 cursor-grab" alt="here" />
-
-                                </div>
-                                <div className="flex-1 text-end">
-                                    <h1 className="text-4xl md:text-6xl font-bold">{i.name}</h1>
-                                    <p className="mt-4 text-lg">{i.detail}</p>
-                                    <br />
-                                    <hr />
-                                    <h3 className="mt-10 cursor-pointer">more detail</h3>
-                                </div>
-
-
-                            </div> :
-                                <div className="min-h-70 mt-6 py-4 flex flex-row gap-10" key={i.id}>
-
-                                    <div className="flex justify-center flex-1">
-                                        <img src={i.imageUrl} className="max-w-[500px] w-full hover:scale-110 transition-all duration-500 cursor-grab" alt="here" />
-
-                                    </div>
-                                    <div className="flex-1">
-                                        <h1 className="text-4xl md:text-6xl font-bold">{i.name}</h1>
-                                        <p className="mt-4 text-lg">{i.detail}</p>
-                                        <br />
-                                        <hr />
-                                        <h3 className="mt-10 cursor-pointer">more detail</h3>
-                                    </div>
-                                </div>
+                            i.id % 2 == 0 ? <AquaAnimalCard id={i.id} name={i.name} imageUrl={i.imageUrl} detail={i.detail} direction="flex-row-reverse text-end" key={i.id}/> :
+                                <AquaAnimalCard id={i.id} name={i.name} imageUrl={i.imageUrl} detail={i.detail} direction="flex-row" key={i.id}/>
                         ))
                     }
 
