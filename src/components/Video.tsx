@@ -1,16 +1,13 @@
-export default function Video() {
-    return (
-        <>
-            <video controls preload="none" className="min-w-full min-h-80 rounded-3xl rounded-b-none">
-                <source src="https://www.youtube.com/watch?v=sPqWC1XvWL4" type="video/mp4" />
-                <track
-                    src="/path/to/captions.vtt"
-                    kind="subtitles"
-                    srcLang="en"
-                    label="English"
-                />
-                Your browser does not support the video tag.
-            </video>
-        </>
-    )
+export default function Video({ youtubeId }: { youtubeId: string }) {
+  return (
+    <div className="relative pt-[50.25%] w-full bg-black rounded-xl overflow-hidden rounded-b-none">
+      <iframe
+        className="absolute top-0 left-0 w-full h-full"
+        src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1&mute=0`}
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
+    </div>
+  )
 }
