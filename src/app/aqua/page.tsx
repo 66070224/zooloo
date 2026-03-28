@@ -3,10 +3,25 @@ import Navbar from "@/components/navbar/Navbar";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function AquaPage() {
   const [isMounted, setIsMounted] = useState(false);
+  const [search, setSearch] = useState('')
+  const router = useRouter()
 
+
+  const handleSearch = (e:any) =>{
+    if(e.key == "Enter"){
+      e.preventDefault()
+      if (search.trim()){
+        router.push(`/aquasearch?search=${encodeURIComponent(search)}`);
+      }else{
+        router.push('/aqua/ocean');
+      }
+    }
+      
+  } 
   useEffect(() => {
     setIsMounted(true);
   }, []);
@@ -19,7 +34,12 @@ export default function AquaPage() {
       
       <div className="flex items-center justify-center flex-col h-screen">
         <h1 className="text-6xl mb-6 font-bold"><span className=" text-blue-600">Aqua</span> Zone</h1>
-        <input type="text" placeholder="Enter Ocean Animal...." className="px-5 py-3 rounded-full bg-white/20 backdrop-blur text-white placeholder-white/60 text-3xl" />
+        <input type="text" placeholder="Enter Ocean Animal...." value={search} onChange={(e)=>setSearch(e.target.value)}  onKeyDown={handleSearch} className="px-5 py-3 rounded-full bg-white/20 backdrop-blur text-white placeholder-white/60 text-3xl" />
+        <Link href={{
+            pathname: '/aqua/ocean',
+            query: { search: search },
+          }} 
+        ></Link>
         <Link href='/aqua/ocean' >
           <div className="mt-10 cursor-pointer hover:scale-120 z-10 backdrop-blur transition-all duration-500">Go Dive.....</div>
         </Link>
