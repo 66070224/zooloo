@@ -5,6 +5,8 @@ export interface Animal {
   name: string;
   group: string;
   image: string;
+  description: string;
+  detail: string;
 }
 
 export default async function searchAnimal(

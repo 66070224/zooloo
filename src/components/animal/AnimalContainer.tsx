@@ -26,8 +26,8 @@ export default async function AnimalContainer({
     );
   }
   return (
-    <div className="w-full h-full flex flex-col gap-1">
-      <div className="grid grid-cols-5 grid-rows-2 gap-2 place-items-center">
+    <div className="w-full h-full flex flex-col gap-1 items-center">
+      <div className="grid grid-cols-2 grid-rows-5 sm:grid-cols-5 sm:grid-rows-2 gap-2 place-items-center">
         {animals.map((animal) => (
           <AnimalCard
             key={animal._id.toString()}
@@ -36,7 +36,7 @@ export default async function AnimalContainer({
           />
         ))}
       </div>
-      <PaginationBar page={page} total={total} />
+      <PaginationBar currentPage={page} total={total} />
     </div>
   );
 }
