@@ -1,26 +1,15 @@
+import connectDB from "@/libs/mongodb";
+import AirAnimal from "@/models/airAnimal";
 import { WithId } from "mongodb";
-import connectDB from "./mongodb";
 
-export interface Animal {
-  name: string;
-  group: string;
-  image: string;
-  description: string;
-  detail: string;
-}
-
-export default async function searchAnimal(
-  query: string,
-  group: string,
-  page: number,
-) {
+export default async function getAirAnimals(query: string, page: number) {
   try {
     const { db } = await connectDB();
 
     const result = await db
-      .collection<Animal>("animals")
+      .collection<AirAnimal>("air")
       .aggregate([
-        { $match: { group, name: { $regex: query, $options: "i" } } },
+        { $match: { name: { $regex: query, $options: "i" } } },
         {
           $facet: {
             animals: [{ $skip: 10 * (page - 1) }, { $limit: 10 }],
@@ -30,7 +19,7 @@ export default async function searchAnimal(
       ])
       .toArray();
 
-    const animals = result[0].animals as WithId<Animal>[];
+    const animals = result[0].animals as WithId<AirAnimal>[];
     const total = (result[0].totalCount[0]?.count ?? 0) as number;
 
     return { animals, total };
