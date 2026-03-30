@@ -2,7 +2,7 @@ import connectDB from "@/libs/mongodb";
 import AirAnimal from "@/models/airAnimal";
 import { WithId } from "mongodb";
 
-export default async function getAirAnimals(query: string, page: number) {
+export async function getAirAnimals(query: string, page: number) {
   try {
     const { db } = await connectDB();
 

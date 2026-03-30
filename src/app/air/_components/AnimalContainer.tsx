@@ -1,8 +1,7 @@
-
 import AnimalCard from "./AnimalCard";
 import PaginationBar from "./PaginationBar";
 import { WithId } from "mongodb";
-import getAirAnimals from "../actions/getAirAnimals";
+import { getAirAnimals } from "../actions";
 import AirAnimal from "@/models/airAnimal";
 
 export default async function AnimalContainer({

@@ -15,7 +15,7 @@ export default function AnimalPopUp({
 }) {
   const [isCloseButtonHover, setIsCloseButtonHover] = useState(false);
   return (
-    <div className="absolute -top-25 max-w-screen max-h-175 bg-black/95 rounded-2xl p-10 text-white flex flex-col gap-5 overflow-y-scroll">
+    <div className="absolute z-10 -top-25 max-w-screen max-h-175 bg-black/95 rounded-2xl p-10 text-white flex flex-col gap-5 overflow-y-scroll">
       <div className="sticky top-0 flex justify-end p-2 z-10">
         <button
           type="button"
@@ -65,7 +65,7 @@ export default function AnimalPopUp({
         <iframe
           width={500}
           height={250}
-          src="https://www.youtube.com/embed/98LnPQUWG6w"
+          src={`https://www.youtube.com/embed/${animal.youtubeID}`}
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen

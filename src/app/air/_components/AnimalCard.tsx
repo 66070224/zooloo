@@ -18,7 +18,7 @@ export default function AnimalCard({ animal }: { animal: AirAnimal }) {
   return (
     <>
       <div
-        className="relative h-62.5 w-fit bg-black rounded-2xl transition-all duration-300 cursor-pointer hover:scale-110"
+        className="relative h-62.5 w-50 bg-black rounded-2xl transition-all duration-300 cursor-pointer hover:scale-110"
         onClick={openPopUpHandle}
       >
         <Image
@@ -36,8 +36,9 @@ export default function AnimalCard({ animal }: { animal: AirAnimal }) {
           <h1 className="font-bold text-2xl">{animal.name}</h1>
         </div>
         <div className="px-2.5">
-          <span className="text-gray-500 flex flex-row items-center gap-1">
-            <FaLocationDot /> {animal.location}
+          <span className="text-gray-500 text-sm flex items-center gap-1">
+            <FaLocationDot />
+            <span className="truncate">{animal.location}</span>
           </span>
         </div>
       </div>

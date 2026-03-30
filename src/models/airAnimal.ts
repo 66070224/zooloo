@@ -7,4 +7,5 @@ export default interface AirAnimal {
   location: string;
   size: number;
   weight: number;
+  youtubeID: string;
 }
