@@ -5,6 +5,7 @@ export default function AddAirPage() {
     <div className="p-5">
       <h1>Add Air Animal</h1>
       <AddAirForm />
+      <hr />
     </div>
   );
 }
