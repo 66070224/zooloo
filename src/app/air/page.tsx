@@ -20,7 +20,6 @@ export default async function AirPage({
           <Suspense key={`${query}-${page}`} fallback={<Loading />}>
             <AnimalContainer
               query={query || ""}
-              group="air"
               page={page ? Number(page) : 1}
             />
           </Suspense>

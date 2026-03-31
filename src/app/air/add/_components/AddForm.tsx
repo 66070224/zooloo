@@ -66,7 +66,7 @@ export default function AddAirForm() {
       />
       <datalist id="dietary-list">
         <option value="Omnivores">both</option>
-        <option value="Carnivores">meat</option>
+        <option value="Carnivorous">meat</option>
         <option value="Herbivores">plant</option>
       </datalist>
       <input type="text" name="youtubeID" placeholder="youtube ID" />

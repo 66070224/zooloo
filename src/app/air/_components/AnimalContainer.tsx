@@ -6,17 +6,15 @@ import AirAnimal from "@/models/airAnimal";
 
 export default async function AnimalContainer({
   query,
-  group,
   page,
 }: {
   query: string;
-  group: string;
   page: number;
 }) {
   const { animals, total } = await getAirAnimals(query, page);
   return (
     <div className="w-full h-full flex flex-col gap-1 items-center">
-      <div className="grid grid-cols-2 grid-rows-5 sm:grid-cols-5 sm:grid-rows-2 gap-2 place-items-center">
+      <div className="grid grid-cols-2 grid-rows-5 sm:grid-cols-5 sm:grid-rows-2 gap-3 place-items-center">
         {animals.map((animal: WithId<AirAnimal>) => {
           const { _id, ...data } = animal;
           return <AnimalCard key={animal._id.toString()} animal={data} />;

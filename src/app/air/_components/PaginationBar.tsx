@@ -29,14 +29,14 @@ export default function PaginationBar({
   };
 
   return (
-    <div>
+    <div className="flex flex-row gap-2 pt-2">
       {Array(totalPage)
         .fill(0)
         .map((_, index) => (
           <button
             key={index}
             type="submit"
-            className="bg-black text-white px-2 items-center rounded-full cursor-pointer transition-all duration-300 hover:scale-110"
+            className={`px-2 items-center text-center rounded-full cursor-pointer transition-all duration-300 ${index + 1 !== currentPage ? "bg-gray-500 text-white hover:scale-110" : "bg-black text-white scale-120"}`}
             onClick={() => handlePageSubmit(index + 1)}
           >
             {index + 1}
