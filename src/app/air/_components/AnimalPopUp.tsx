@@ -35,7 +35,7 @@ export default function AnimalPopUp({
           height={400}
           width={400}
           alt={animal.name}
-          loading="lazy"
+          loading="eager"
         />
         <p className="w-full h-full">{animal.detail}</p>
       </div>
