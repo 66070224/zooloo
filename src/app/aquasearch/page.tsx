@@ -33,7 +33,7 @@ export default async function Aquasearch({
 function serializeAnimal(animal: WithId<aquaAnimal>) {
   return {
     ...animal,
-    _id: animal._id.toString(), // convert ObjectId → string
+    _id: animal._id.toString(),
   };
 }
 

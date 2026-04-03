@@ -16,4 +16,4 @@ export default function Navbar({ index }: { index: number }) {
     </nav>
   );
 }
-3;
+
