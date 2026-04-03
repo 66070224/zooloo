@@ -44,7 +44,8 @@ export default function GroundSearchPage() {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             onKeyDown={handleKeyDown}
-            className="w-full bg-white/10 border border-white/20 text-white rounded-full px-6 py-4 pl-12 focus:outline-none focus:ring-2 focus:ring-[#b45309] shadow-xl shadow-[#b45309]/20 transition-all text-lg"
+            className="w-full bg-white/10 border border-white/20 text-white rounded-full px-6 py-4 pl-12 focus:outline-none focus:ring-2 focus:ring-[#b45309] 
+            shadow-xl shadow-[#b45309]/20 transition-all text-lg"
           />
           <svg className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -53,7 +54,9 @@ export default function GroundSearchPage() {
 
         <div 
           onClick={handleImageClick}
-          className={`relative w-72 h-72 rounded-full border-4 border-[#b45309] flex items-center justify-center shadow-[0_0_60px_rgba(180,83,9,0.4)] bg-gray-800 mb-16 overflow-hidden transition-all duration-300 ${searchedAnimal ? 'cursor-pointer hover:scale-105 hover:shadow-[0_0_80px_rgba(180,83,9,0.6)]' : ''}`}
+          className={`relative w-72 h-72 rounded-full border-4 border-[#b45309] flex items-center justify-center shadow-[0_0_60px_rgba(180,83,9,0.4)]
+             bg-gray-800 mb-16 overflow-hidden transition-all duration-300 
+             ${searchedAnimal ? 'cursor-pointer hover:scale-105 hover:shadow-[0_0_80px_rgba(180,83,9,0.6)]' : ''}`}
         >
           {searchedAnimal ? (
             <Image
@@ -72,7 +75,8 @@ export default function GroundSearchPage() {
 
         <Link
           href="/ground/explore"
-          className="px-8 py-3 bg-[#b45309] hover:bg-[#d97706] text-white font-bold rounded-full shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
+          className="px-8 py-3 bg-[#b45309] hover:bg-[#d97706] text-white font-bold rounded-full shadow-lg 
+          hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
         >
           Into the Wild...
         </Link>

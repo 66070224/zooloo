@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { groundAnimals } from "@/data/animals";
 import AnimalCard from "@/components/animalcard";
 import Navbar from "@/components/navbar/Navbar";
